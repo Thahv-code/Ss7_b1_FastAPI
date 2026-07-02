@@ -36,3 +36,7 @@ def get_order_detail(order_id: int):
         if order["id"] == order_id:
             return order
     return {"message": "Order not found"}
+
+
+# order_id = 999 - Kết quả hiện tại (Mã HTTP + Body) 200 OK - Kết quả đúng mong muốn : trả về lỗi 404 (k tìm thấy dữ liệu) - Lỗi phát hiện api trả về sai mã lỗi 200 thay vì 404
+# order_id = 1 - Kết quả hiện tại (Mã HTTP + Body) 200 OK - Kết quả đúng mong muốn : trà về 200ok - Lỗi phát hiện : lam lộ các dữ liệu nhậy cảm
